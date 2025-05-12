@@ -1,18 +1,21 @@
-html{
-   cursor: url("mata_mosca.png") 30 30,auto;
-
+html {
+  cursor: url(imagens/mata_mosca.png) 30 30, auto;
+  height: 100%;
 }
-
-
 
 body {
-  background-image: url(bg.jpg);
+  background-image: url(imagens/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   margin: 0;
   padding: 0;
+  height: 100vh; /* Ocupa toda a altura da tela */
+  overflow: hidden;
+  position: relative;
 }
 
+/* Moscas de tamanhos diferentes */
 .mosca1 {
   width: 50px;
   height: 50px;
@@ -26,6 +29,7 @@ body {
   height: 90px;
 }
 
+/* Direção da mosca */
 .ladoA {
   transform: scaleX(1);
 }
@@ -34,25 +38,30 @@ body {
   transform: scaleX(-1);
 }
 
+/* Painel de informações */
 .painel {
-  position: absolute;
-  width: 190px;
-  padding: 10px;
+  position: fixed; /* Fixa o painel no topo da tela */
+  top: 0;
   left: 0;
-  bottom: 0;
-  border-top: solid 1px #fff;
-  background-color: #fff;
-  opacity: 0.7;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.7); /* fundo branco com transparência */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
+  z-index: 9999;
 }
 
-.vidas {
-  float: left;
+/* Corações (vidas) */
+.vidas img {
+  height: 30px;
+  margin-right: 5px;
 }
 
+/* Cronômetro */
 .cronometro {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
+  color: #000;
 }
