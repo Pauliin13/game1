@@ -44,15 +44,15 @@ window.addEventListener('resize', ajustaTamanhoPalcoJogo);
 
 // Sons
 function tocarSomClique() {
-  const som = new Audio('sons/clique.mp3');
+  const som = new Audio('clique.mp3');
   som.play();
 }
 function tocarSomVitoria() {
-  const som = new Audio('sons/vitoria.mp3');
+  const som = new Audio('vitoria.mp3');
   som.play();
 }
 function tocarSomPerda() {
-  const som = new Audio('sons/derrota.mp3');
+  const som = new Audio('derrota.mp3');
   som.play();
 }
 
@@ -124,7 +124,7 @@ function ladoAleatorio() {
 
 // Função para tocar o som de clique
 function tocarSomClique() {
-  const som = new Audio('imagens/som/click.mp3');
+  const som = new Audio('clique.mp3');
   som.play();
 }
 
